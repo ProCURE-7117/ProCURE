@@ -1,0 +1,44 @@
+### Instruction ###
+Please disrupt the order between existing variable names in the following code.
+Ensure that the converted code is grammatically correct and semantically equivalent to the original code.
+
+### Original Code ###
+Here is the code you need to modify:
+$code$
+Please output the modified code without any explaination!
+
+### Processing Steps ###
+1.Identification Phase： 
+- Extract all declared variables 
+- Filter out function parameters and imported symbols
+2.Substitution Phase：  
+- Analysis the given bijective mapping for eligible variables  
+- Verify mapping doesn't create keyword conflicts (e.g., 'list', 'dict')
+3.Validation Phase：  
+- Confirm semantic equivalence through control flow analysis  
+- Ensure no syntax errors introduced
+
+### Example ###
+**example input**
+def frequency_lists(list1):
+    dic_data = {}
+    for num in list1:
+        if num in dic_data.keys():
+            dic_data[num] += 1
+        else:
+            key = num
+            value = 1
+            dic_data[key] = value
+    return dic_data
+
+**example output**
+def frequency_lists(list1):
+    value = {}
+    for dic_data in list1:
+        if dic_data in value.keys():
+            value[dic_data] += 1
+        else:
+            key = dic_data
+            num = 1
+            value[key] = num
+    return value

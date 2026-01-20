@@ -1,0 +1,40 @@
+### Instruction ###
+Please identify two independent statement blocks in the following code and swap their positions. 
+These blocks should be independent of each other to ensure that the modified code remains grammatically correct and semantically equivalent to the original. 
+If no such independent blocks are found, leave the code unchanged.
+
+### Original Code ###
+Here is the code you need to modify:
+$code$
+Please output the modified code without any explaination!
+
+### Processing Steps ###
+1.Identification Phase： 
+- Find all the definition and usage point of the statements
+- Select a pair of statements with independent control flow as the conversion target
+2.Swap Phase：
+- Exchange the selected pair of statements 
+3.Validation Phase：  
+- Confirm semantic equivalence through control flow analysis  
+- Ensure no syntax errors introduced
+
+### Example ###
+**example input**
+def quick_sort(lst):  
+    n = len(lst)
+    if n <= 1:
+        return lst
+    baseline = lst[0] 
+    left = [lst[i] for i in range(1, len(lst)) if lst[i] < baseline] 
+    right = [lst[i] for i in range(1, len(lst)) if lst[i] >= baseline]
+    return quick_sort(left) + [baseline] + quick_sort(right)
+
+**example output**
+def quick_sort(lst):  
+    n = len(lst)
+    if n <= 1:
+        return lst
+    baseline = lst[0]
+    right = [lst[i] for i in range(1, len(lst)) if lst[i] >= baseline]
+    left = [lst[i] for i in range(1, len(lst)) if lst[i] < baseline] 
+    return quick_sort(left) + [baseline] + quick_sort(right)

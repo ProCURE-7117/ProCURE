@@ -1,0 +1,40 @@
+### Instruction ###
+Please replace the variable names in the following Python code with randomly generated 5-character strings. 
+Ensure that both the definition and usage of each variable are updated consistently. 
+The modified code should be grammatically correct and semantically equivalent to the original.
+
+### Original Code ###
+Here is the code you need to modify:
+$code$
+Please output the modified code without any explaination!
+
+### Processing Steps ###
+1.Identification Phase： 
+- Locate the given variable
+- Locate the second definition and subsequent uses of a variable
+2.Substitution Phase：
+- Generate random 5-character variables that meet syntax requirements  
+- Starting from the second definition of the variable, traverse the code and replace the variable name with the random 5-character one by one
+- Verify mapping doesn't create keyword conflicts (e.g., 'list', 'dict')
+3.Validation Phase：  
+- Confirm semantic equivalence through control flow analysis  
+- Ensure no syntax errors introduced
+
+### Example ###
+**example input**
+def even_lists(list1):
+    list_data = []
+    for num in list1:
+        if num % 2 == 0:
+            list_data.append(num)
+    list_data = list_data + [0]
+    return list_data
+
+**example output**
+def even_lists(list1):
+    list_data = []
+    for num in list1:
+        if num % 2 == 0:
+            list_data.append(num)
+    xWqZr= list_data + [0]
+    return xWqZr

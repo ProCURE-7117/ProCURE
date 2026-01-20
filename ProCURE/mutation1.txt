@@ -1,0 +1,47 @@
+### Instruction ###
+Please swap the if and else blocks in the following Python code by negating the condition and switching the code inside the blocks. 
+Ensure the modified code is grammatically correct and semantically equivalent to the original. 
+If there is no if else statement, leave the code unchanged.
+
+### Original Code ###
+Here is the code you need to modify:
+$code$
+Please output the modified code without any explaination!
+
+### Processing Steps ###
+1.Identification Phase： 
+- Extract all 'if-else' statement
+- Choose one of them as the transformation target
+2.Filp Phase：
+- Negating the condition of 'if' statement
+- Swap the contents of the if and else blocks  
+3.Validation Phase：  
+- Confirm semantic equivalence through control flow analysis  
+- Ensure no syntax errors introduced
+
+### Example ###
+**example input**
+def frequency_lists(list1):
+    list1 = [item for sublist in list1 for item in sublist]
+    dic_data = {}
+    for num in list1:
+        if num in dic_data.keys():
+            dic_data[num] += 1
+        else:
+            key = num
+            value = 1
+            dic_data[key] = value
+    return dic_data
+
+**example output**
+def frequency_lists(list1):
+    list1 = [item for sublist in list1 for item in sublist]
+    dic_data = {}
+    for num in list1:
+        if num in dic_data.keys():
+            dic_data[num] += 1
+        else:
+            key = num
+            value = 1
+            dic_data[key] = value
+    return dic_data

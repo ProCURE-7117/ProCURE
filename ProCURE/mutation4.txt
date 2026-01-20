@@ -1,0 +1,45 @@
+### Instruction ###
+Please replace all variable names in the following Python code with randomly generated 5-character strings. 
+Do not modify reserved keywords, built-in function names, or fixed data structure names. 
+Ensure the modified code is grammatically correct and semantically equivalent to the original.
+
+### Original Code ###
+Here is the code you need to modify:
+$code$
+Please output the modified code without any explaination!
+
+### Processing Steps ###
+1.Identification Phase： 
+- Locate the given variable name
+2.Substitution Phase：
+- Generate random character variables that meet syntax requirements  
+- Create bijective mapping bwteen given variables and generated strings
+- Replace variable names according to variable name mapping
+3.Validation Phase：  
+- Confirm semantic equivalence through control flow analysis
+- Ensure no syntax errors introduced
+
+### Example ###
+**example input**
+def frequency_lists(list1):
+    dic_data = {}
+    for num in list1:
+        if num in dic_data.keys():
+            dic_data[num] += 1
+        else:
+            key = num
+            value = 1
+            dic_data[key] = value
+    return dic_data
+
+**example output**
+def frequency_lists(list1):
+    a2Kx9 = {}
+    for j8Uiz in list1: 
+        if j8Uiz in a2Kx9.keys():
+            a2Kx9[j8Uiz] += 1
+        else:
+            aB9xR = j8Uiz
+            zJ4tY = 1
+            a2Kx9[aB9xR] = zJ4tY
+    return a2Kx9
